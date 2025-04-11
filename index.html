@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fallstudie Klimawandel</title>
+  <style type="text/css">
+    /* Grund-Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .main-container {
+    display: flex;
+    }
+
+    .sidebar {
+    width: 200px;
+    background-color: #363636;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Navigationslinks und Footer am unteren Rand */
+    }
+
+    header {
+      background: #87ff87;
+      color: #000000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #2b2b2b;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      flex-wrap: wrap;
+      float: inline-start;
+      width: 20%;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 4px; 
+    }
+
+    nav a:hover {
+      background: #777;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+      width: 80%;
+    }
+
+    .box {
+      flex: 1 1 300px;
+      background: #e0f7fa;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      width: 80%;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      cursor: pointer;
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    footer {
+      background: #acacac;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    /* Responsives Verhalten */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column; 
+        align-items: center;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <form>
+        <input type="text" name="suche" placeholder="Suche">
+      </form>
+    </nav>
+    <img src="logo.png" alt="Logo meiner Website">
+    <h1>Fallstudie Klimawandel</h1>
+    <h2></h2>
+  </header>
+
+  <div class="main-container">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#">Start</a></li>
+        <li><a href="#">Über mich</a></li>
+        <li><a href="#">Projekte</a></li>
+        <li><a href="#">Kontakt</a></li>      
+      </ul>
+    </nav>
+
+  <div class="container">
+    <div class="box">
+      <h3>Box 1</h3>
+      <p>responsitives Verhalten überprüfen</p>
+    </div>
+    <div class="box">
+      <h3>Box 2</h3>
+      <p>responsitives Verhalten überprüfen</p>
+    </div>
+
+
+  <div class="container">
+    <h4>CO₂-Emissionsdaten (fiktiv)</h4>
+
+    <input type="text" id="filterInput" placeholder="Nach Unternehmen filtern...">
+
+    <table id="co2Tabelle">
+      <thead>
+        <tr>
+          <th onclick="sortTabelle(0)">Land</th>
+          <th onclick="sortTabelle(1)">Unternehmen</th>
+          <th onclick="sortTabelle(2)">Emissionen (in Tonnen)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Deutschland</td><td>EcoPower AG</td><td>15000</td></tr>
+        <tr><td>USA</td><td>GreenFuture Inc.</td><td>30000</td></tr>
+        <tr><td>China</td><td>SunEnergy Ltd.</td><td>45000</td></tr>
+        <tr><td>Deutschland</td><td>BlueSky GmbH</td><td>12000</td></tr>
+        <tr><td>USA</td><td>AirTech Corp.</td><td>25000</td></tr>
+        <tr><td>USA</td><td>Air Corp.</td><td>2000</td></tr>
+        <tr><td>China</td><td>Tech Corp.</td><td>22000</td></tr>
+        <tr><td>Kanada</td><td>GreenTech Corp.</td><td>5000</td></tr>
+        <tr><td>Japan</td><td>OilTech Corp.</td><td>2500</td></tr>
+        <tr><td>Russland</td><td>Gas Corp.</td><td>21000</td></tr>
+        <tr><td>Frankreich</td><td>Airplanes forever</td><td>12000</td></tr>
+        <tr><td>Frankreich</td><td>Airplanes today</td><td>11000</td></tr>
+        <tr><td>USA</td><td>Sunstorm AG</td><td>18000</td></tr>
+        <tr><td>China</td><td>GlobalTech Corp.</td><td>24500</td></tr>
+        <tr><td>Deutschland</td><td>GlobalGas AG</td><td>22300</td></tr>
+        <tr><td>Kanada</td><td>FutureTech Corp.</td><td>8000</td></tr>
+        <tr><td>Mexiko</td><td>SkyTech Corp.</td><td>17000</td></tr>
+        <tr><td>China</td><td>Deepwater Inc.</td><td>16000</td></tr>
+        <tr><td>Australien</td><td>Dumpwater Corp.</td><td>28000</td></tr>
+        <tr><td>USA</td><td>ClearAir AG</td><td>25000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  </div>
+
+  <footer>
+    <p><a href="#">Datenschutz</a></p>
+    <p><a href="#">Impressum</a></p>
+  </footer>
+  <script type="text/javascript">
+    // Suchfunktion
+    document.querySelector("form").onsubmit = function() {
+      let suche = document.querySelector("input").value;
+      if (suche.length < 3) {
+        alert("zu kurzer Suchbegriff");
+      } else {
+        let h2 = document.querySelector("h2");
+        h2.innerText = "Suchfunktion noch nicht unterstützt";
+        h2.style["background-color"] = "green";
+      }
+      return false;
+    }
+  </script>
+
+  <script>
+    // Navigationsleiste Sprachorientiert an linker bzw. rechter Seite
+    const rtlSprachen = ['ar', 'he', 'fa', 'ur'];
+    const sprache = (navigator.language || navigator.userLanguage).toLowerCase();
+    const sprachcode = sprache.split('-')[0];  
+    document.documentElement.setAttribute("lang", sprachcode);
+    document.documentElement.setAttribute("dir", rtlSprachen.includes(sprachcode) ? "rtl" : "ltr");
+  </script>
+  
+  <script>
+      // Filterfunktion
+      document.getElementById("filterInput").addEventListener("keyup", function() {
+        let filter = this.value.toLowerCase();
+        let rows = document.querySelectorAll("#co2Tabelle tbody tr");
+  
+        rows.forEach(row => {
+          let unternehmen = row.cells[1].textContent.toLowerCase();
+          row.style.display = unternehmen.includes(filter) ? "" : "none";
+        });
+      });
+  
+      // Sortierfunktion
+      function sortTabelle(spaltenIndex) {
+        const table = document.getElementById("co2Tabelle");
+        const rows = Array.from(table.rows).slice(1); // ohne Kopfzeile
+        let sorted = rows.sort((a, b) => {
+          let valA = a.cells[spaltenIndex].textContent.toLowerCase();
+          let valB = b.cells[spaltenIndex].textContent.toLowerCase();
+  
+          if (!isNaN(valA) && !isNaN(valB)) {
+            return parseFloat(valA) - parseFloat(valB); // Zahlensortierung
+          }
+  
+          return valA.localeCompare(valB); // Textsortierung
+        });
+  
+        // Neu einfügen
+        const tbody = table.querySelector("tbody");
+        sorted.forEach(row => tbody.appendChild(row));
+      }
+  </script>
+</body>
+</html>
