@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fallstudie Klimawandel</title>
+  <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style type="text/css">
     /* Grund-Styles */
     * {
@@ -121,8 +123,10 @@
 <body>
   <header>
     <nav>
-      <form>
-        <input type="text" name="suche" placeholder="Suche">
+      <!-- Framework Funktion Suchleiste -->
+      <form class="d-flex justify-content-center mb-3" role="search">
+        <input class="form-control me-2 w-50" type="search" placeholder="Suche" aria-label="Suche" name="suche">
+        <button class="btn btn-success" type="submit">Suchen</button>
       </form>
     </nav>
     <img src="logo.png" alt="Logo meiner Website">
@@ -175,16 +179,16 @@
         <tr><td>Kanada</td><td>GreenTech Corp.</td><td>5000</td></tr>
         <tr><td>Japan</td><td>OilTech Corp.</td><td>2500</td></tr>
         <tr><td>Russland</td><td>Gas Corp.</td><td>21000</td></tr>
-        <tr><td>Frankreich</td><td>Airplanes forever</td><td>12000</td></tr>
+        <tr><td>China</td><td>Airplanes forever</td><td>12000</td></tr>
         <tr><td>Frankreich</td><td>Airplanes today</td><td>11000</td></tr>
         <tr><td>USA</td><td>Sunstorm AG</td><td>18000</td></tr>
         <tr><td>China</td><td>GlobalTech Corp.</td><td>24500</td></tr>
-        <tr><td>Deutschland</td><td>GlobalGas AG</td><td>22300</td></tr>
+        <tr><td>Indien</td><td>GlobalGas AG</td><td>22300</td></tr>
         <tr><td>Kanada</td><td>FutureTech Corp.</td><td>8000</td></tr>
         <tr><td>Mexiko</td><td>SkyTech Corp.</td><td>17000</td></tr>
         <tr><td>China</td><td>Deepwater Inc.</td><td>16000</td></tr>
         <tr><td>Australien</td><td>Dumpwater Corp.</td><td>28000</td></tr>
-        <tr><td>USA</td><td>ClearAir AG</td><td>25000</td></tr>
+        <tr><td>Japan</td><td>ClearAir AG</td><td>25000</td></tr>
       </tbody>
     </table>
   </div>
